@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Item
+comment0.text=\r\n\ Class\ filled\ with\ static\ things\ that\ help\ with\ items.\r\n
+comment1.params=item
+comment1.target=boolean\ itemExists(java.lang.String)
+comment1.text=\r\n\ @param\ item\ -\ item\ id\r\n\ @return\ -\ if\ an\ item\ exists\ or\ not\r\n
+comment2.params=item
+comment2.target=boolean\ tryUseItem(java.lang.String)
+comment2.text=\ \r\n\ Tries\ to\ use\ an\ item\ with\ item\ id\:\ String\ item.\r\n\ Returns\ false\ if\ no\ item\ exists.\ Otherwise,\ returns\ true.\r\n
+comment3.params=
+comment3.target=void\ useHpPotion()
+comment4.params=
+comment4.target=void\ useRustySword()
+numComments=5
