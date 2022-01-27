@@ -1,3 +1,3 @@
 public class Environment {
-    public static boolean inCombat = true;
+    public static String room = null; // null represents not in a room. for example, in start screen menu
 }

@@ -5,7 +5,7 @@
 public class Item {
     // TODO: when adding an item: add to itemDictionary, tryUseItem(), and give it a function
     // item id, desc
-    private static String itemDictionary[][] = {
+    private static final String[][] itemDictionary = {
         {"hp potion", "heals you a bit"},
         {"rusty sword", "a rusty sword"}, // TODO: implement damage queue system?
     };
@@ -29,23 +29,17 @@ public class Item {
      */
     public static boolean tryUseItem(String item) {
         switch(item) {
-            case "hp potion": useHpPotion(); return true; 
-            case "rusty sword": useRustySword(); return true; 
+            case "bronze key": useBronzeKey(); return true;
+            case "gold key": useGoldKey(); return true;
             default: return false;
         }
     }
-    
-    // TODO: you should probably let this be used out of combat
-    private static void useHpPotion() { // TODO: instead of println, use queue system to control println
-        if(Environment.inCombat && Inventory.has("hp potion")) {
-            System.out.println("HP pot used!");
-            Inventory.remove("hp potion");
-        }
+
+    private static void useBronzeKey() {
+
     }
-    
-    private static void useRustySword() { // TODO: instead of println, use queue system to control println
-        if(Environment.inCombat) {
-            System.out.println("Rusty Sword!");
-        }
+
+    private static void useGoldKey() {
+
     }
 }
