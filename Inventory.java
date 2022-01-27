@@ -25,9 +25,9 @@ public class Inventory {
     /** returns placeholder inventory. make this fit screen size later. **/
     public String toString(){
         String ans = "";
-        for(int i = 0; i<inventory.size(); i++){
-            ans+=inventory.get(i);
-            ans+="\n";
+        for (String item: inventory) {
+            ans += item;
+            ans += "\n";
         }
         return ans;
     }
