@@ -5,6 +5,42 @@ https://medium.com/backwoods/flaws-of-an-undead-genre-whats-wrong-with-point-cli
 notes:
 entities can use keys
 
+game needs {
+    entities
+        classes? inheritance from Entity (coords)
+        doors can be opened or closed or locked
+        can change skin (open and closed doors look diff, can pick up item to replace tile with ground tile)
+    player
+        movement (4 directions)
+        $ inspect (store facing)
+        $ use [item]
+    printqueue
+        queue movement commands but remove from q if others get q'd
+            eg just move: "you moved right" but if bump into wall "you bumped into a wall" w/o mvt string
+            implementation wip:
+                queue all the things
+                if queue.size > 1: // if it isnt just movement string
+                    queue[0].remove;
+        q bumps into entities and walls
+        q inspects
+        q
+
+    while true
+        update():
+            userInput = input()
+            if (userInput.equals(w,a,s,d)) corresponding mvt command()
+            if (userInput.equals(inspect)) inspect()
+            if (userInput[0:7].equals(use)) use(userInput[8:])
+
+        render():
+            if printqueue empty
+                throw bug // dont crash game // should never be empty
+            while stuff in printqueue
+                printToGame(stuff)
+                wait for player hit RET
+
+}
+
 
 eg door w/o key cannot open. door w/ key can open.
 {
