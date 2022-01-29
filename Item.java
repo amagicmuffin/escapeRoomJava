@@ -38,7 +38,7 @@ public class Item {
                 default: return false;
             }
         } else {
-            // TODO printqueue("You broke the bottle. The pile of glass at your feet increases in size.");
+            // TODO printqueue("You do not have a " + item);
             System.out.println("You do not have a " + item);
             return false;
         }
