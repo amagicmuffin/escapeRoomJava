@@ -6,6 +6,7 @@ public class Item {
     // TODO: when adding an item: add to itemDictionary, tryUseItem(), and give it a function
     // item id, desc
     private static final String[][] itemDictionary = {
+        {"fragile glass bottle", "a fragile glass bottle"},
         {"hp potion", "heals you a bit"},
         {"rusty sword", "a rusty sword"}, // TODO: implement damage queue system?
     };
@@ -25,13 +26,21 @@ public class Item {
     
     /** 
      * Tries to use an item with item id: String item.
-     * Returns false if no item exists. Otherwise, returns true.
+     * Returns false if no item exists or if you do not have the item.
+     * Otherwise, returns true.
      */
     public static boolean tryUseItem(String item) {
-        switch(item) {
-            case "bronze key": useBronzeKey(); return true;
-            case "gold key": useGoldKey(); return true;
-            default: return false;
+        if (Inventory.has(item)) {
+            switch(item) {
+                case "bronze key": useBronzeKey(); return true;
+                case "gold key": useGoldKey(); return true;
+                case "fragile glass bottle": useFragileGlassBottle(); return true;
+                default: return false;
+            }
+        } else {
+            // TODO printqueue("You broke the bottle. The pile of glass at your feet increases in size.");
+            System.out.println("You do not have a " + item);
+            return false;
         }
     }
 
@@ -40,6 +49,14 @@ public class Item {
     }
 
     private static void useGoldKey() {
+
+    }
+
+    /** temp func for testing **/
+    private static void useFragileGlassBottle() {
+        Inventory.remove("fragile glass bottle");
+        // TODO printqueue("You broke the bottle. The pile of glass at your feet increases in size.");
+        System.out.println("You broke the bottle. The pile of glass at your feet increases in size.");
 
     }
 }

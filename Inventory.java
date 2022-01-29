@@ -15,6 +15,8 @@ public class Inventory {
     /** adds String item to player inventory**/
     public static void obtain(String item) {
         inventory.add(item);
+        // printqueue("you picked up a: " + item);
+        System.out.println("you picked up a: " + item);
     }
     
     /** removes String item from player inventory**/
