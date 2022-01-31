@@ -1,5 +1,14 @@
 escape room game. mechanics similar to those old flash games like riddle school
 
+TODO LIST OF THINGS I NEED TO DO NEXT:
+- get working map
+- get system for placing entities on map 
+    - add Entity class?
+
+REMEMBER TO DO THESE
+- refactor PrintQueue to work with screensize
+
+
 https://medium.com/backwoods/flaws-of-an-undead-genre-whats-wrong-with-point-click-adventures-b3cb93a4c364
 
 notes:
