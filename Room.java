@@ -5,6 +5,20 @@ public class Room {
         room = r;
     }
 
+    public Room() {
+        char[][] defaultRoom = {
+            {'#','#','#','#','#'},
+            {'#','.','.','.','#'},
+            {'#','.','.','.','#'},
+            {'#','.','.','.','#'},
+            {'#','.','.','.','#'},
+            {'#','#','#','#','#'}
+        };
+
+
+        room = defaultRoom;
+    }
+
     /* simple getters and setters */
     public char[][] getRoom() {
         return room;
