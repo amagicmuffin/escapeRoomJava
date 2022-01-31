@@ -2,6 +2,7 @@ public class Environment {
     public static String room = null; // null represents not in a room. for example, in start screen menu
 
     /** WHY IS THIS SO LONG LKSDJFLSKDFJ this needs to be fixed **/
+    // TODO get this outta here use the default constructor lmao
     // 
     private static char[][] mapA = {
         {'#','#','#','#','#'},
