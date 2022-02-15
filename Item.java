@@ -5,10 +5,10 @@
 public class Item {
     // TODO: when adding an item: add to itemDictionary, tryUseItem(), and give it a function
     // item id, desc
-    private static final String[][] itemDictionary = {
-        {"fragile glass bottle", "a fragile glass bottle"},
-        {"hp potion", "heals you a bit"},
-        {"rusty sword", "a rusty sword"}, // TODO: implement damage queue system?
+    private static final String[] itemDictionary = {
+        "fragile glass bottle",
+        "hp potion",
+        "rusty sword" // TODO: implement damage queue system?
     };
     
     /**
@@ -16,8 +16,8 @@ public class Item {
      * @return - if an item exists or not
      */
     public static boolean itemExists(String item) {
-        for (int i = 0; i<itemDictionary.length; i++) {
-            if (itemDictionary[i][0].equalsIgnoreCase(item)) { // itemDict[i][0] is item id
+        for (String dictItem : itemDictionary) {
+            if (dictItem.equalsIgnoreCase(item)) { // item is item id
                 return true;
             }
         }
@@ -26,8 +26,8 @@ public class Item {
     
     /** 
      * Tries to use an item with item id: String item.
-     * Returns false if no item exists or if you do not have the item.
-     * Otherwise, returns true.
+     * @return false if no item exists or if you do not have the item,
+     * or true otherwise
      */
     public static boolean tryUseItem(String item) {
         if (Inventory.has(item)) {

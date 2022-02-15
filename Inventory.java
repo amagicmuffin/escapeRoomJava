@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * The player's inventory
+ */
 public class Inventory {
-    // TODO: this probably makes for cringe game mechanics. think abt removing it
-    // private int capacity;
-    // private int currentWeight;
-    
     private static ArrayList<String> inventory = new ArrayList<String>();
     
     /** returns whether player inventory has an item **/

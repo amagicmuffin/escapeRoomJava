@@ -1,4 +1,9 @@
+/**
+ * Represents a room.
+ * Has functions to get, set, swap tiles in the room.
+ */
 public class Room {
+    public static final char FLOOR_TILE = '.';
     private char[][] room;
 
     public Room(char[][] r) {
@@ -6,7 +11,7 @@ public class Room {
     }
 
     public Room() {
-        char[][] defaultRoom = {
+        room = new char[][]{
             {'#','#','#','#','#'},
             {'#','.','.','.','#'},
             {'#','.','.','.','#'},
@@ -14,9 +19,6 @@ public class Room {
             {'#','.','.','.','#'},
             {'#','#','#','#','#'}
         };
-
-
-        room = defaultRoom;
     }
 
     /* simple getters and setters */
@@ -32,14 +34,18 @@ public class Room {
         room[i][j] = newTile;
     }
 
-    /* moving tiles */
+    /**
+     * move a tile from 1 to 2.
+     * replace old tile position with char representing floor
+     */
     public void move(int i1, int j1, int i2, int j2) {
-        final char FLOOR_TILE = '.'; // TODO: should this be somewhere else?
         setTile(i2, j2, getTile(i1,j1));
         setTile(i1, j1, FLOOR_TILE);
     }
 
-    /* rendering room */
+    /**
+     * println's toString
+     */
     public void render() {
         System.out.println(this);
     }
@@ -60,6 +66,7 @@ public class Room {
         return output;
     }
 
+    /** test program **/
     public static void main(String[] args) {
         char[][] r = {
                 {'#','#','#','#','#'},
