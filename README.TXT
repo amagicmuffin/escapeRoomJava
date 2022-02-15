@@ -4,6 +4,16 @@ TODO LIST OF THINGS I NEED TO DO NEXT:
 - get working map
 - get system for placing entities on map 
     - add Entity class?
+- make working inspect()
+    - need:
+        - "dictionary" of entities (Entity is a class, store Entity[] in Environment
+            - entity id
+            - coords (room as map[][], i, j)
+            - char What the thing it looks like
+            - function to call when inspected
+        - eval coords at facing when inspect called
+        - if there is entity in dictionary at the coords,
+        - do a thing (model off of Item.tryUseItem() system
 
 REMEMBER TO DO THESE
 - refactor PrintQueue to work with screensize
