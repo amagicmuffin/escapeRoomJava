@@ -5,5 +5,4 @@ public class configs {
             {new Room(), new Room(), new Room()}
     };
 
-    // TODO add entities here
 }
