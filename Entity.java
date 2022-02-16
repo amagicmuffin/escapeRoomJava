@@ -7,17 +7,24 @@ public class Entity {
     private int jPos;
     private char tile;
 
-    public Entity(String id, int iPos, int jPos, char tile) {
+    // TODO order the functions
+    public Entity(String id, char tile, int iPos, int jPos, int roomiPos, int roomjPos) {
         this.id = id;
+        this.tile = tile;
         this.iPos = iPos;
         this.jPos = jPos;
-        this.tile = tile;
+        this.roomiPos = roomiPos;
+        this.roomjPos = roomjPos;
     }
 
     public String getId() {
         return id;
     }
 
+    public char getTile() {
+        return tile;
+    }
+    
     public int getiPos() {
         return iPos;
     }
@@ -26,7 +33,11 @@ public class Entity {
         return jPos;
     }
 
-    public char getTile() {
-        return tile;
+    public int getroomiPos() {
+        return iPos;
+    }
+
+    public int getroomjPos() {
+        return jPos;
     }
 }
