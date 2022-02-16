@@ -11,9 +11,9 @@ TODO LIST OF THINGS I NEED TO DO NEXT:
             - coords (room as map[][], i, j)
             - char What the thing it looks like
             - function to call when inspected
-        - eval coords at facing when inspect called
-        - if there is entity in dictionary at the coords,
-        - do a thing (model off of Item.tryUseItem() system
+                - eval coords at facing when inspect called
+                - if there is entity in dictionary at the coords,
+                - do a thing (model off of Item.tryUseItem() system
 
 REMEMBER TO DO THESE
 - refactor PrintQueue to work with screensize
