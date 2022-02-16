@@ -1,5 +1,20 @@
 escape room game. mechanics similar to those old flash games like riddle school
 
+folder structure
+|
+|--Entity
+|  |--Entity.java
+|  |--Player extends Entity
+|  |
+|  |--interface Door
+|  |--interface Dispenser
+|  |
+|  |--class Door extends Entity implements Door
+|  |--class Dispense extends Entity implements Door
+|  |--class DispenserDoor extends Entity implements Door implements Dispense
+|
+|
+
 TODO LIST OF THINGS I NEED TO DO NEXT:
 - get working map
 - get system for placing entities on map 
