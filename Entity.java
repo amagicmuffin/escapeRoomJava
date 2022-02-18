@@ -3,9 +3,11 @@
  */
 public class Entity {
     private String id;
+    private char tile;
     private int iPos;
     private int jPos;
-    private char tile;
+    private int roomiPos;
+    private int roomjPos;
 
     // TODO order the functions
     public Entity(String id, char tile, int iPos, int jPos, int roomiPos, int roomjPos) {
