@@ -15,6 +15,18 @@ folder structure
 |
 |
 
+TODO organize this later:
+  /** NOTE: this will be used for exits, too. make an alias? */
+  Teleporter extends Entity
+    super(inherit the things)
+    int roomiDestination
+    int roomjDestination
+    int iDestination
+    int jDestination
+    
+    void activate()
+      move the player to location designated in instance variables
+
 TODO LIST OF THINGS I NEED TO DO NEXT:
 - get working map
 - get system for placing entities on map 
